@@ -1,0 +1,24 @@
+﻿@using ContextMenu.Models
+@model ContextMenuViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <div>
+        Here's an example for the context menu control: @{ Html.RenderPartial("~/Views/Shared/ContextMenu1.cshtml",
+                 new ContextMenuViewModel { EmailName = "Lisa@yahoo.com", HtmlPrefix = "Inst1" }); }
+    </div>
+    <div>
+        It can be rendered multiple times on the same page: @{ Html.RenderPartial("~/Views/Shared/ContextMenu1.cshtml",
+                       new ContextMenuViewModel { EmailName = "Bob@gmail.com", HtmlPrefix = "Inst2" }); }
+    </div>
+</body>
+</html>
