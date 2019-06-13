@@ -1,7 +1,6 @@
 ﻿@model ContextMenu.Models.ContextMenuViewModel
 
 @{
-    Layout = null;
     var emailname = @Html.Raw(Json.Encode(Model.EmailName));
     var cMenuTemp = Model.HtmlPrefix + "cMenu";
     var cMenu = @Html.Raw(Json.Encode(cMenuTemp));
